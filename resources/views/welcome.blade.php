@@ -267,7 +267,7 @@
 
                                     </div>
                                     <div class="col-md-12 mt-3">
-                                        <label for="transmisi" class="form-label">Jarak Tempuh <label
+                                        <label for="jarak_tempuh" class="form-label">Jarak Tempuh <label
                                                 class="text-red">*</label></label>
                                         <input class="form-control" id="jarak_tempuh" name="jarak_tempuh" type="number"
                                             placeholder="Masukan Jarak Tempuh Mobil">
@@ -283,21 +283,20 @@
                                         </select>
                                     </div>
                                     <div class="col-md-12 mt-3">
-                                        <label for="Bahan_Bakar" class="form-label">Pajak <label
-                                                class="text-red">*</label>
+                                        <label for="pajak" class="form-label">Pajak <label class="text-red">*</label>
                                         </label>
                                         <input class="form-control" id="pajak" name="pajak" type="number"
                                             placeholder="Masukan Pajak Mobil">
                                     </div>
                                     <div class="col-md-12 mt-3">
-                                        <label for="Bahan_Bakar" class="form-label">MPG (Mil Per Galon)<label
+                                        <label for="mpg" class="form-label">MPG (Mil Per Galon)<label
                                                 class="text-red">*</label>
                                         </label>
                                         <input class="form-control" id="mpg" name="mpg" type="number"
                                             placeholder="Masukan MPG Mobil">
                                     </div>
                                     <div class="col-md-12 mt-3">
-                                        <label for="Bahan_Bakar" class="form-label">Ukuran Mesin <label
+                                        <label for="ukuran_mesin" class="form-label">Ukuran Mesin <label
                                                 class="text-red">*</label>
                                         </label>
                                         <input class="form-control" type="number" id="ukuran_mesin" name="ukuran_mesin"
