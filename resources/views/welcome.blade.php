@@ -192,7 +192,7 @@
                                             placeholder="Masukan Pajak Mobil">
                                     </div>
                                     <div class="col-md-12 mt-3">
-                                        <label for="Bahan_Bakar" class="form-label">MPG <label
+                                        <label for="Bahan_Bakar" class="form-label">MPG (Mil Per Galon)<label
                                                 class="text-red">*</label>
                                         </label>
                                         <input class="form-control" id="mpg" name="mpg" type="number"
