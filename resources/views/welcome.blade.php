@@ -4,6 +4,7 @@
 <head>
     <!-- basic -->
     <meta charset="utf-8">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- mobile metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +21,7 @@
     <!-- Responsive-->
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
     <!-- fevicon -->
-    <link rel="icon" href="{{ asset('images/fevicon.png') }}" type="image/gif" />
+    <link rel="icon" href="{{ asset('images/car.png') }}" type="image/gif" />
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="{{ asset('css/jquery.mCustomScrollbar.min.css') }}">
     <!-- Tweaks for older IEs-->
@@ -141,7 +142,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12 mt-3">
-                                        <label for="transmisi" class="form-label">Merk<label
+                                        <label for="transmisi" class="form-label">Merk <label
                                                 class="text-red">*</label></label>
                                         <select class="form-control" id="transmisi" name="transmisi" required>
                                             <option value="" selected disabled>Pilih Merk Mobil </option>
@@ -151,13 +152,13 @@
                                         </select>
                                     </div>
                                     <div class="col-md-12 mt-3">
-                                        <label for="transmisi" class="form-label">Tahun<label
+                                        <label for="transmisi" class="form-label">Tahun <label
                                                 class="text-red">*</label></label>
                                         <input class="form-control" min="1500" max="2099" id="tahun" name="tahun"
                                             type="number" placeholder="Masukan Tahun Mobil">
                                     </div>
                                     <div class="col-md-12 mt-3">
-                                        <label for="transmisi" class="form-label">Transmisi<label
+                                        <label for="transmisi" class="form-label">Transmisi <label
                                                 class="text-red">*</label></label>
                                         <select class="form-control" id="transmisi" name="transmisi" required>
                                             <option value="" selected disabled>Pilih Transmisi Mobil </option>
@@ -168,13 +169,13 @@
 
                                     </div>
                                     <div class="col-md-12 mt-3">
-                                        <label for="transmisi" class="form-label">Jarak Tempuh<label
+                                        <label for="transmisi" class="form-label">Jarak Tempuh <label
                                                 class="text-red">*</label></label>
                                         <input class="form-control" id="jarak_tempuh" name="jarak_tempuh" type="number"
                                             placeholder="Masukan Jarak Tempuh Mobil">
                                     </div>
                                     <div class="col-md-12 mt-3">
-                                        <label for="Bahan_Bakar" class="form-label">Bahan Bakar<label
+                                        <label for="Bahan_Bakar" class="form-label">Bahan Bakar <label
                                                 class="text-red">*</label>
                                         </label>
                                         <select class="form-control" id="bahan-bakar" name="bahan-bakar" required>
@@ -184,21 +185,22 @@
                                         </select>
                                     </div>
                                     <div class="col-md-12 mt-3">
-                                        <label for="Bahan_Bakar" class="form-label">Pajak<label
+                                        <label for="Bahan_Bakar" class="form-label">Pajak <label
                                                 class="text-red">*</label>
                                         </label>
                                         <input class="form-control" id="pajak" name="pajak" type="number"
                                             placeholder="Masukan Pajak Mobil">
                                     </div>
                                     <div class="col-md-12 mt-3">
-                                        <label for="Bahan_Bakar" class="form-label">MPG<label class="text-red">*</label>
+                                        <label for="Bahan_Bakar" class="form-label">MPG <label
+                                                class="text-red">*</label>
                                         </label>
                                         <input class="form-control" id="mpg" name="mpg" type="number"
                                             placeholder="Masukan MPG Mobil">
                                     </div>
                                     <div class="col-md-12 mt-3">
-                                        <label for="Bahan_Bakar" class="form-label">Ukuran Mesin
-                                            <label class="text-red">*</label>
+                                        <label for="Bahan_Bakar" class="form-label">Ukuran Mesin <label
+                                                class="text-red">*</label>
                                         </label>
                                         <input class="form-control" type="number" id="ukuran_mesin" name="ukuran_mesin"
                                             placeholder="Masukan Ukuran Mesin Mobil">
@@ -209,7 +211,6 @@
                                     </div>
                                     <div class="col-md-12 mt-3" id="hasilContainer" style="display: none;">
                                         <label for="hasil" class="form-label">Hasil Pencarian Harga Mobil Bekas
-                                            <label class="text-red">*</label>
                                         </label>
                                         <input class="form-control" type="number" id="hasil" name="hasil" readonly>
                                     </div>
