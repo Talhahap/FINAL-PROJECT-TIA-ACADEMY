@@ -204,7 +204,14 @@
                                             placeholder="Masukan Ukuran Mesin Mobil">
                                     </div>
                                     <div class="col-sm-12">
-                                        <button class="find_btn">Cari Sekarang</button>
+                                        <button class="find_btn" type="button" onclick="cariSekarang()">Cari
+                                            Sekarang</button>
+                                    </div>
+                                    <div class="col-md-12 mt-3" id="hasilContainer" style="display: none;">
+                                        <label for="hasil" class="form-label">Hasil Pencarian Harga Mobil Bekas
+                                            <label class="text-red">*</label>
+                                        </label>
+                                        <input class="form-control" type="number" id="hasil" name="hasil" readonly>
                                     </div>
                                 </div>
                             </form>
@@ -217,13 +224,14 @@
     <!-- end bestCar -->
 
     <!-- choose  section -->
-    <div class="choose ">
-        <div class="container">
+    <div class=" choose ">
+        <div class=" container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
                         <h2>Mengapa Memilih Kami</h2>
-                        <span>Berikut alasan mengapa Anda harus memilih Haya Auto Express sebagai platform prediksi
+                        <span>Berikut alasan mengapa Anda harus memilih Haya Auto Express
+                            sebagai platform prediksi
                             harga mobil bekas Anda.</span>
                     </div>
                 </div>
@@ -232,21 +240,24 @@
                 <div class="col-md-12">
                     <div class="choose_box">
                         <span>01</span>
-                        <p>Kami menyediakan berbagai jenis mobil bekas berkualitas dengan harga terjangkau dan proses
+                        <p>Kami menyediakan berbagai jenis mobil bekas berkualitas dengan
+                            harga terjangkau dan proses
                             yang mudah.</p>
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="choose_box">
                         <span>02</span>
-                        <p>Kami memiliki layanan pelanggan yang siap membantu Anda 24/7 untuk memastikan pengalaman jual
+                        <p>Kami memiliki layanan pelanggan yang siap membantu Anda 24/7
+                            untuk memastikan pengalaman jual
                             beli mobil Anda berjalan lancar.</p>
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="choose_box">
                         <span>03</span>
-                        <p>Kami menawarkan pilihan asuransi untuk memastikan Anda merasa aman dan terlindungi selama
+                        <p>Kami menawarkan pilihan asuransi untuk memastikan Anda merasa
+                            aman dan terlindungi selama
                             transaksi jual beli.</p>
                     </div>
                 </div>
@@ -268,7 +279,8 @@
                 <div class="col-md-12">
                     <div id="myCarousel" class="carousel slide cutomer_Carousel " data-ride="carousel">
                         <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="0" class="active">
+                            </li>
                             <li data-target="#myCarousel" data-slide-to="1"></li>
                             <li data-target="#myCarousel" data-slide-to="2"></li>
                         </ol>
@@ -283,8 +295,10 @@
                                             <div class="test_box">
                                                 <h4>Budi Santoso</h4>
                                                 <span>Pembeli</span>
-                                                <p>Saya sangat puas dengan layanan Haya Auto Express. Proses beli sangat
-                                                    mudah dan mobil yang saya beli dalam kondisi sangat baik.</p>
+                                                <p>Saya sangat puas dengan layanan Haya Auto
+                                                    Express. Proses beli sangat
+                                                    mudah dan mobil yang saya beli dalam
+                                                    kondisi sangat baik.</p>
                                                 <i><img src="{{ asset('images/te1.png') }}" alt="#" /></i>
                                             </div>
                                         </div>
@@ -301,8 +315,10 @@
                                             <div class="test_box">
                                                 <h4>Siti Aisyah</h4>
                                                 <span>Pembeli</span>
-                                                <p>Pengalaman beli mobil di Haya Auto Express sangat memuaskan. Layanan
-                                                    pelanggan sangat responsif dan membantu.</p>
+                                                <p>Pengalaman beli mobil di Haya Auto
+                                                    Express sangat memuaskan. Layanan
+                                                    pelanggan sangat responsif dan membantu.
+                                                </p>
                                                 <i><img src="{{ asset('images/te1.png') }}" alt="#" /></i>
                                             </div>
                                         </div>
@@ -319,8 +335,10 @@
                                             <div class="test_box">
                                                 <h4>Andi Wijaya</h4>
                                                 <span>Pembeli</span>
-                                                <p>Mobil yang disediakan sangat bervariasi dan dalam kondisi baik. Saya
-                                                    pasti akan menggunakan Haya Auto Express lagi di masa depan.</p>
+                                                <p>Mobil yang disediakan sangat bervariasi
+                                                    dan dalam kondisi baik. Saya
+                                                    pasti akan menggunakan Haya Auto Express
+                                                    lagi di masa depan.</p>
                                                 <i><img src="{{ asset('images/te1.png') }}" alt="#" /></i>
                                             </div>
                                         </div>
@@ -349,7 +367,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="cont_call">
-                            <h3> <strong class="multi color_chang"> Hubungi Kami</strong><br>
+                            <h3> <strong class="multi color_chang"> Hubungi
+                                    Kami</strong><br>
                                 (+62) 82330478047<br>
                                 hayaautoexpress@gmail.com
                             </h3>
@@ -383,153 +402,163 @@
     <!-- sidebar -->
     <script src="{{ asset('js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js">
+    </script>
 </body>
-<!-- <script>
-        document.getElementById('predictForm').onsubmit = async function(event) {
-            event.preventDefault();
-            const formData = new FormData(event.target);
-            const params = new URLSearchParams(formData).toString();
-            const response = await fetch(`http://localhost:5000/predicts?${params}`);
-            const result = await response.json();
-            var img = document.getElementById('plot');
-    
-            // Change the src attribute
-            img.src = 'http://localhost:5000/gambar';
-            var hasil = document.getElementById('hasil');
-    
-            // Change the src attribute
-            hasil.textContent  = 'Hasil Prediksi: '+result['predict'];
-            //document.getElementById('scatterPlot').src = result.plot_url;
-        };
+<script>
+//      document.getElementById('predictForm').onsubmit = async function(event) {
+//          event.preventDefault();
+//          const formData = new FormData(event.target);
+//          const params = new URLSearchParams(formData).toString();
+//          const response = await fetch(`http://localhost:5000/predicts?${params}`);
+//          const result = await response.json();
+//          var img = document.getElementById('plot');
 
-    function sendColab() {
+//          // Change the src attribute
+//          img.src = 'http://localhost:5000/gambar';
+//          var hasil = document.getElementById('hasil');
+
+//          // Change the src attribute
+//          hasil.textContent  = 'Hasil Prediksi: '+result['predict'];
+//          //document.getElementById('scatterPlot').src = result.plot_url;
+//      };
+
+//  function sendColab() {
+//  event.preventDefault();
+//  // Menghentikan perilaku default dari tombol submit
+
+//  Swal.fire({
+//      title: "Cari Sekarang",
+//      icon: "warning",
+//      showCancelButton: true,
+//      confirmButtonColor: "#3085d6",
+//      cancelButtonColor: "#d33",
+//      confirmButtonText: "Ya",
+//      cancelButtonText: "Tidak"
+//    }).then((result) => {
+//      if (result.isConfirmed) {
+
+//          // Ambil nilai dari form input
+//          const MasukanMerkMobil = document.getElementById('merk_mobil').value; // merk mobil
+//          const ModelNumeric =
+//              Model === 'BMX 3X13' ? 0 :
+//              Model === 'Daihatsu Ayla' ? 1 :
+//              Model === 'Daihatsu Ayla M' ? 2 :
+//              Model === 'Daihatsu Ayla R' ? 3 :
+//              Model === 'Daihatsu Ayla X' ? 4 :
+//              Model === 'Daihatsu Gran Max' ? 5 :
+//              Model === 'Daihatsu Grand Max Delvan' ? 6 :
+//              Model === 'Daihatsu Grand Max PS AC PU' ? 7 :
+//              Model === 'Daihatsu Sigra' ? 8 :
+//              Model === 'Daihatsu Sigra R' ? 9 :
+//              Model === 'Daihatsu Sigra R DLX' ? 10 :
+//              Model === 'Daihatsu Sigra M' ? 11 :
+//              Model === 'Daihatsu Terios TX ADVENTURE' ? 12 :
+//              Model === 'Daihatsu Xenia' ? 13 :
+//              Model === 'Daihatsu Xenia DLX VTTi' ? 14 :
+//              Model === 'Daihatsu Xenia R' ? 15 :
+//              Model === 'Daihatsu Xenia VVTI' ? 16 :
+//              Model === 'Daihatsu Xenia XI VVTI' ? 17 :
+//              Model === 'Datsun GO + PANCA A' ? 18 :
+//              Model === 'Honda Accord VTi' ? 19 :
+//              Model === 'Honda Brio' ? 20 :
+//              Model === 'Honda Brio E' ? 21 :
+//              Model === 'Honda Brio IVTEC E' ? 22 :
+//              Model === 'Honda Brio S' ? 23 :
+//              Model === 'Honda Brio Satya E' ? 24 :
+//              Model === 'Honda BRV E CVT CKD' ? 25 :
+//              Model === 'Honda civic type R' ? 26 :
+//              Model === 'Honda CR-V' ? 27 :
+//              Model === 'Honda CRV i-VTEC' ? 28 :
+//              Model === 'Honda CRV Turbo Prestige' ? 29 :
+//              Model === 'Honda Freed G83' ? 30 :
+//              Model === 'Honda HRV S' ? 31 :
+//              Model === 'Honda Jazz' ? 32 :
+//              Model === 'Honda Jazz GE8' ? 33 :
+//              Model === 'Honda Jazz RS' ? 34 :
+//              Model === 'Honda Mobilio E' ? 35 :
+//              Model === 'Isuzu Kijang Phanter' ? 36 :
+//              Model === 'Mitsubishi' ? 37 :
+//              Model === 'Mitsubishi Colt L 300' ? 38 :
+//              Model === 'Mitsubishi Colt T120 SS' ? 39 :
+//              Model === 'Mitsubishi L300' ? 40 :
+//              Model === 'Mitsubishi Mirage' ? 41 :
+//              Model === 'Mitsubishi Pajero Sport DAKAR HI POWER' ? 42 :
+//              Model === 'Mitsubishi Pajero Sport GLX' ? 43 :
+//              Model === 'Mitsubishi Strada TRITON DOUBLE CABIN EXCEED' ? 44 :
+//              Model === 'Mitsubishi T120SS 3-WAY WIDE DECK' ? 45 :
+//              Model === 'Mitsubishi T120SS T' ? 46 :
+//              Model === 'Nissan Grand Livina' ? 47 :
+//              Model === 'Nissan Grand Livina SV' ? 48 :
+//              Model === 'Nissan March' ? 49 :
+//              Model === 'Nissan Serena Comfort Touring' ? 50 :
+//              Model === 'Nissan X Trail' ? 51 :
+//              Model === 'Toyota Agya' ? 52 :
+//              Model === 'Toyota Agya G' ? 53 :
+//              Model === 'Toyota Avanza' ? 54 : 
+//              Model === 'Toyota Avanza E'? 55 :
+//              Model === 'Toyota Avanza G' ? 56 :
+//              Model === 'Toyota Avanza Veloz' ? 57 :
+//              Model === 'Toyota Calya' ? 58 :
+//              Model === 'Toyota Calya E' ? 59 :
+//              Model === 'Toyota Calya G' ? 60 :
+//              Model === 'Toyota Etios Valco' ? 61 :
+//              Model === 'Toyota Fortuner' ? 62 :
+//              Model === 'Toyota Fortuner G' ? 63 :
+//              Model === 'Toyota Fortuner VRZ TRD LUX' ? 64 :
+//              Model === 'Toyota Fortuner VRZ TRD LUX AT' ? 65 :
+//              Model === 'Toyota Hilux Single Cap' ? 66 :
+//              Model === 'Toyota Inova' ? 67 :
+//              Model === 'Toyota Innova G' ? 68 :
+//              Model === 'Toyota Innova V' ? 69 :
+//              Model === 'Toyota Kijang Innova' ? 70 :
+//              Model === 'Toyota Kijang Innova V' ? 71 :
+//              Model === 'Toyota Rush' ? 72 :
+//              Model === 'Toyota Sienta V' ? 73 :
+//              Model === 'Toyota Supra mk4' ? 74 : 
+//              Model === 'Toyota Vios' ? 75 :
+//              Model === 'Toyota Yaris E' ? 76 :
+//              Model === 'Toyota Yaris E FL' ? 77 :
+//              Model === 'Toyota Yaris G'  ? 78 :
+//              Model === 'Toyota Yaris J' ? 79 :
+//              Model === 'Toyota Yaris J MC' ? 80 :
+//              Model === 'Toyota Yaris S' ? 81 ;
+//              Model === 'Toyota Yaris S GR SPORT 7 AB' ? 82 :
+//              Model === 'Suzuki Carry Futura FD' ? 83 :
+//              Model === 'Suzuki Carry Futura' ? 84 :
+//              Model === 'Suzuki Carry Futura ST 150' ? 85 :
+//              Model === 'Suzuki Carry Mega' ? 86 :
+//              Model === 'Suzuki Carry STANDAR PU' ? 87 :
+//              Model === 'Suzuki Ertiga' ? 88 :   
+//              Model === 'Suzuki Ertiga DX' ? 89 :
+//              Model === 'Suzuki Ertiga GL' ? 90 :
+//              Model === 'Suzuki Ertiga GL DOUBLE'? 91 :
+//              Model === 'Suzuki Ertiga GL DOUBLE BLOWER' ? 92 :
+//              Model === 'Suzuki Mega Carry PU AC PS' ? 93 :
+//              ;
+
+//          const MasukanTransmisi = document.getElementById('transmisi').value; // Transmisi mobil
+//          const MasukanTransmisiNumeric =
+//             MasukanTransmisi === 'Manual' ? 0 :
+//             MasukanTransmisi === 'Automatic' ? 1 :
+//             MasukanTransmisi === 'Semi-Auto' ? 2 :
+//             ;
+
+//          const MasukanBahanBakar = document.getElementById('bahan_bakar').value; // Bahan Bakar mobil
+//          const MasukanBahanBakarNumeric =
+//             MasukanBahanBakar === 'Petrol/Gasoline/Bensin' ? 0 :
+//             MasukanBahanBakar === 'Diesel/Solar' ? 1 :
+//             ;
+
+
+function cariSekarang() {
     event.preventDefault();
-    // Menghentikan perilaku default dari tombol submit
+    // Isi input dengan hasil pencarian
+    //  document.getElementById("hasil").value = hargaMobilBekas;
 
-    Swal.fire({
-        title: "Cari Sekarang",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Ya",
-        cancelButtonText: "Tidak"
-      }).then((result) => {
-        if (result.isConfirmed) {
-
-            // Ambil nilai dari form input
-            const MasukanMerkMobil = document.getElementById('merk_mobil').value; // merk mobil
-            const ModelNumeric =
-                Model === 'BMX 3X13' ? 0 :
-                Model === 'Daihatsu Ayla' ? 1 :
-                Model === 'Daihatsu Ayla M' ? 2 :
-                Model === 'Daihatsu Ayla R' ? 3 :
-                Model === 'Daihatsu Ayla X' ? 4 :
-                Model === 'Daihatsu Gran Max' ? 5 :
-                Model === 'Daihatsu Grand Max Delvan' ? 6 :
-                Model === 'Daihatsu Grand Max PS AC PU' ? 7 :
-                Model === 'Daihatsu Sigra' ? 8 :
-                Model === 'Daihatsu Sigra R' ? 9 :
-                Model === 'Daihatsu Sigra R DLX' ? 10 :
-                Model === 'Daihatsu Sigra M' ? 11 :
-                Model === 'Daihatsu Terios TX ADVENTURE' ? 12 :
-                Model === 'Daihatsu Xenia' ? 13 :
-                Model === 'Daihatsu Xenia DLX VTTi' ? 14 :
-                Model === 'Daihatsu Xenia R' ? 15 :
-                Model === 'Daihatsu Xenia VVTI' ? 16 :
-                Model === 'Daihatsu Xenia XI VVTI' ? 17 :
-                Model === 'Datsun GO + PANCA A' ? 18 :
-                Model === 'Honda Accord VTi' ? 19 :
-                Model === 'Honda Brio' ? 20 :
-                Model === 'Honda Brio E' ? 21 :
-                Model === 'Honda Brio IVTEC E' ? 22 :
-                Model === 'Honda Brio S' ? 23 :
-                Model === 'Honda Brio Satya E' ? 24 :
-                Model === 'Honda BRV E CVT CKD' ? 25 :
-                Model === 'Honda civic type R' ? 26 :
-                Model === 'Honda CR-V' ? 27 :
-                Model === 'Honda CRV i-VTEC' ? 28 :
-                Model === 'Honda CRV Turbo Prestige' ? 29 :
-                Model === 'Honda Freed G83' ? 30 :
-                Model === 'Honda HRV S' ? 31 :
-                Model === 'Honda Jazz' ? 32 :
-                Model === 'Honda Jazz GE8' ? 33 :
-                Model === 'Honda Jazz RS' ? 34 :
-                Model === 'Honda Mobilio E' ? 35 :
-                Model === 'Isuzu Kijang Phanter' ? 36 :
-                Model === 'Mitsubishi' ? 37 :
-                Model === 'Mitsubishi Colt L 300' ? 38 :
-                Model === 'Mitsubishi Colt T120 SS' ? 39 :
-                Model === 'Mitsubishi L300' ? 40 :
-                Model === 'Mitsubishi Mirage' ? 41 :
-                Model === 'Mitsubishi Pajero Sport DAKAR HI POWER' ? 42 :
-                Model === 'Mitsubishi Pajero Sport GLX' ? 43 :
-                Model === 'Mitsubishi Strada TRITON DOUBLE CABIN EXCEED' ? 44 :
-                Model === 'Mitsubishi T120SS 3-WAY WIDE DECK' ? 45 :
-                Model === 'Mitsubishi T120SS T' ? 46 :
-                Model === 'Nissan Grand Livina' ? 47 :
-                Model === 'Nissan Grand Livina SV' ? 48 :
-                Model === 'Nissan March' ? 49 :
-                Model === 'Nissan Serena Comfort Touring' ? 50 :
-                Model === 'Nissan X Trail' ? 51 :
-                Model === 'Toyota Agya' ? 52 :
-                Model === 'Toyota Agya G' ? 53 :
-                Model === 'Toyota Avanza' ? 54 : 
-                Model === 'Toyota Avanza E'? 55 :
-                Model === 'Toyota Avanza G' ? 56 :
-                Model === 'Toyota Avanza Veloz' ? 57 :
-                Model === 'Toyota Calya' ? 58 :
-                Model === 'Toyota Calya E' ? 59 :
-                Model === 'Toyota Calya G' ? 60 :
-                Model === 'Toyota Etios Valco' ? 61 :
-                Model === 'Toyota Fortuner' ? 62 :
-                Model === 'Toyota Fortuner G' ? 63 :
-                Model === 'Toyota Fortuner VRZ TRD LUX' ? 64 :
-                Model === 'Toyota Fortuner VRZ TRD LUX AT' ? 65 :
-                Model === 'Toyota Hilux Single Cap' ? 66 :
-                Model === 'Toyota Inova' ? 67 :
-                Model === 'Toyota Innova G' ? 68 :
-                Model === 'Toyota Innova V' ? 69 :
-                Model === 'Toyota Kijang Innova' ? 70 :
-                Model === 'Toyota Kijang Innova V' ? 71 :
-                Model === 'Toyota Rush' ? 72 :
-                Model === 'Toyota Sienta V' ? 73 :
-                Model === 'Toyota Supra mk4' ? 74 : 
-                Model === 'Toyota Vios' ? 75 :
-                Model === 'Toyota Yaris E' ? 76 :
-                Model === 'Toyota Yaris E FL' ? 77 :
-                Model === 'Toyota Yaris G'  ? 78 :
-                Model === 'Toyota Yaris J' ? 79 :
-                Model === 'Toyota Yaris J MC' ? 80 :
-                Model === 'Toyota Yaris S' ? 81 ;
-                Model === 'Toyota Yaris S GR SPORT 7 AB' ? 82 :
-                Model === 'Suzuki Carry Futura FD' ? 83 :
-                Model === 'Suzuki Carry Futura' ? 84 :
-                Model === 'Suzuki Carry Futura ST 150' ? 85 :
-                Model === 'Suzuki Carry Mega' ? 86 :
-                Model === 'Suzuki Carry STANDAR PU' ? 87 :
-                Model === 'Suzuki Ertiga' ? 88 :   
-                Model === 'Suzuki Ertiga DX' ? 89 :
-                Model === 'Suzuki Ertiga GL' ? 90 :
-                Model === 'Suzuki Ertiga GL DOUBLE'? 91 :
-                Model === 'Suzuki Ertiga GL DOUBLE BLOWER' ? 92 :
-                Model === 'Suzuki Mega Carry PU AC PS' ? 93 :
-                ;
-
-            const MasukanTransmisi = document.getElementById('transmisi').value; // Transmisi mobil
-            const MasukanTransmisiNumeric =
-               MasukanTransmisi === 'Manual' ? 0 :
-               MasukanTransmisi === 'Automatic' ? 1 :
-               MasukanTransmisi === 'Semi-Auto' ? 2 :
-               ;
-
-            const MasukanBahanBakar = document.getElementById('bahan_bakar').value; // Bahan Bakar mobil
-            const MasukanBahanBakarNumeric =
-               MasukanBahanBakar === 'Petrol/Gasoline/Bensin' ? 0 :
-               MasukanBahanBakar === 'Diesel/Solar' ? 1 :
-               ;
-                   
-    </script> -->
+    // Tampilkan div hasilContainer
+    document.getElementById("hasilContainer").style.display = "block";
+}
+</script>
 
 </html>
