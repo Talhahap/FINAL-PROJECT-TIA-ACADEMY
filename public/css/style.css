@@ -84,6 +84,7 @@ h3 {
 
 h4 {
     font-size: 16px;
+    font-family: "Righteous", cursive;
 }
 
 h5 {
@@ -753,6 +754,21 @@ button {
     text-transform: uppercase;
 }
 
+.cont h4 {
+    color: #414141;
+    font-size: 30px;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+.cont_call h4 {
+    color: #414141;
+    font-size: 30px;
+    line-height: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
 .copyright {
     margin-top: 43px;
     padding: 20px 0px;
@@ -994,6 +1010,12 @@ button {
     font-weight: bold;
     color: #f6d601;
     font-size: 1.5rem;
+    font-family: "Righteous", cursive;
+}
+.text-footer {
+    font-weight: bold;
+    color: #f6d601 !important;
+    font-size: 0.5rem;
     font-family: "Righteous", cursive;
 }
 

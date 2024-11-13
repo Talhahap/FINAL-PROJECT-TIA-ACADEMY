@@ -142,13 +142,111 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12 mt-3">
-                                        <label for="transmisi" class="form-label">Merk <label
+                                        <label for="model" class="form-label">Merk <label
                                                 class="text-red">*</label></label>
-                                        <select class="form-control" id="transmisi" name="transmisi" required>
-                                            <option value="" selected disabled>Pilih Merk Mobil </option>
-                                            <option value="Manual">Manual</option>
-                                            <option value="Automatic">Automatic</option>
-                                            <option value="Semi-Auto">Semi-Auto</option>
+                                        <select class="form-control" id="model" name="model" required>
+                                            <option value="" selected disabled>Pilih Merk Mobil</option>
+                                            <option value="0">BMW 3X13</option>
+                                            <option value="1">Daiatsu Sigra</option>
+                                            <option value="2">Daihatsi Ayla R</option>
+                                            <option value="3">Daihatsu Ayla</option>
+                                            <option value="4">Daihatsu Ayla M</option>
+                                            <option value="5">Daihatsu Ayla R</option>
+                                            <option value="6">Daihatsu Ayla X</option>
+                                            <option value="7">Daihatsu Gran Max</option>
+                                            <option value="8">Daihatsu Grand Max Delvan</option>
+                                            <option value="9">Daihatsu Grand Max PS AC PU</option>
+                                            <option value="10">Daihatsu Sigra</option>
+                                            <option value="11">Daihatsu Sigra</option>
+                                            <option value="12">Daihatsu Sigra M</option>
+                                            <option value="13">Daihatsu Sigra R</option>
+                                            <option value="14">Daihatsu Sigra R DLX</option>
+                                            <option value="15">Daihatsu Terios TX ADVENTURE</option>
+                                            <option value="16">Daihatsu Xenia</option>
+                                            <option value="17">Daihatsu Xenia</option>
+                                            <option value="18">Daihatsu Xenia DLX VTTi</option>
+                                            <option value="19">Daihatsu Xenia R</option>
+                                            <option value="20">Daihatsu Xenia VVTI</option>
+                                            <option value="21">Daihatsu Xenia XI VVTI</option>
+                                            <option value="22">Datsun GO + PANCA A</option>
+                                            <option value="23">Honda Accord VTi</option>
+                                            <option value="24">Honda BRV E CVT CKD</option>
+                                            <option value="25">Honda Brio</option>
+                                            <option value="26">Honda Brio E</option>
+                                            <option value="27">Honda Brio IVTEC E</option>
+                                            <option value="28">Honda Brio S</option>
+                                            <option value="29">Honda Brio Satya E</option>
+                                            <option value="30">Honda CR-V</option>
+                                            <option value="31">Honda CRV Turbo Prestige</option>
+                                            <option value="32">Honda CRV i-VTEC</option>
+                                            <option value="33">Honda Freed G83</option>
+                                            <option value="34">Honda HRV S</option>
+                                            <option value="35">Honda Jazz</option>
+                                            <option value="36">Honda Jazz GE8</option>
+                                            <option value="37">Honda Jazz RS</option>
+                                            <option value="38">Honda Mobilio E</option>
+                                            <option value="39">Honda civic type R</option>
+                                            <option value="40">Isuzu Kijang Phanter</option>
+                                            <option value="41">Mitsubishi</option>
+                                            <option value="42">Mitsubishi Colt L 300</option>
+                                            <option value="43">Mitsubishi Colt T120 SS</option>
+                                            <option value="44">Mitsubishi L300</option>
+                                            <option value="45">Mitsubishi Mirage</option>
+                                            <option value="46">Mitsubishi Pajero Sport DAKAR HI POWER</option>
+                                            <option value="47">Mitsubishi Pajero Sport GLX</option>
+                                            <option value="48">Mitsubishi Strada TRITON DOUBLE CABIN EXCEED</option>
+                                            <option value="49">Mitsubishi T120SS 3-WAY WIDE DECK</option>
+                                            <option value="50">Mitsubishi T120SS T</option>
+                                            <option value="51">Nissan Grand Livina</option>
+                                            <option value="52">Nissan Grand Livina SV</option>
+                                            <option value="53">Nissan March</option>
+                                            <option value="54">Nissan Serena Comfort Touring</option>
+                                            <option value="55">Nissan X Trail</option>
+                                            <option value="56">Suzuki Carry Futura</option>
+                                            <option value="57">Suzuki Carry Futura FD</option>
+                                            <option value="58">Suzuki Carry Futura ST 150</option>
+                                            <option value="59">Suzuki Carry Mega</option>
+                                            <option value="60">Suzuki Carry STANDAR PU</option>
+                                            <option value="61">Suzuki Ertiga</option>
+                                            <option value="62">Suzuki Ertiga DX</option>
+                                            <option value="63">Suzuki Ertiga GL</option>
+                                            <option value="64">Suzuki Ertiga GL</option>
+                                            <option value="65">Suzuki Ertiga GL DOUBLE BLOWER</option>
+                                            <option value="66">Suzuki Mega Carry PU AC PS</option>
+                                            <option value="67">Toyota Agya</option>
+                                            <option value="68">Toyota Agya G</option>
+                                            <option value="69">Toyota Avanza</option>
+                                            <option value="70">Toyota Avanza</option>
+                                            <option value="71">Toyota Avanza E</option>
+                                            <option value="72">Toyota Avanza G</option>
+                                            <option value="73">Toyota Avanza Veloz</option>
+                                            <option value="74">Toyota Calya</option>
+                                            <option value="75">Toyota Calya E</option>
+                                            <option value="76">Toyota Calya G</option>
+                                            <option value="77">Toyota Etios Valco</option>
+                                            <option value="78">Toyota Fortuner</option>
+                                            <option value="79">Toyota Fortuner</option>
+                                            <option value="80">Toyota Fortuner G</option>
+                                            <option value="81">Toyota Fortuner VRZ TRD LUX</option>
+                                            <option value="82">Toyota Fortuner VRZ TRD LUX AT</option>
+                                            <option value="83">Toyota Hilux Single Cap</option>
+                                            <option value="84">Toyota Innova G</option>
+                                            <option value="85">Toyota Innova V</option>
+                                            <option value="86">Toyota Inova</option>
+                                            <option value="87">Toyota Kijang Innova</option>
+                                            <option value="88">Toyota Kijang Innova V</option>
+                                            <option value="89">Toyota Kijang Invova</option>
+                                            <option value="90">Toyota Rush</option>
+                                            <option value="91">Toyota Sienta V</option>
+                                            <option value="92">Toyota Supra mk4</option>
+                                            <option value="93">Toyota Vios</option>
+                                            <option value="94">Toyota Yaris E</option>
+                                            <option value="95">Toyota Yaris E FL</option>
+                                            <option value="96">Toyota Yaris G</option>
+                                            <option value="97">Toyota Yaris J</option>
+                                            <option value="98">Toyota Yaris J MC</option>
+                                            <option value="99">Toyota Yaris S</option>
+                                            <option value="100">Toyota Yaris S GR SPORT 7 AB</option>
                                         </select>
                                     </div>
                                     <div class="col-md-12 mt-3">
@@ -162,9 +260,9 @@
                                                 class="text-red">*</label></label>
                                         <select class="form-control" id="transmisi" name="transmisi" required>
                                             <option value="" selected disabled>Pilih Transmisi Mobil </option>
-                                            <option value="Manual">Manual</option>
-                                            <option value="Automatic">Automatic</option>
-                                            <option value="Semi-Auto">Semi-Auto</option>
+                                            <option value="0">Manual</option>
+                                            <option value="1">Automatic</option>
+                                            <option value="2">Semi-Auto</option>
                                         </select>
 
                                     </div>
@@ -175,13 +273,13 @@
                                             placeholder="Masukan Jarak Tempuh Mobil">
                                     </div>
                                     <div class="col-md-12 mt-3">
-                                        <label for="Bahan_Bakar" class="form-label">Bahan Bakar <label
+                                        <label for="bahan_bakar" class="form-label">Bahan Bakar <label
                                                 class="text-red">*</label>
                                         </label>
-                                        <select class="form-control" id="bahan-bakar" name="bahan-bakar" required>
+                                        <select class="form-control" id="bahan_bakar" name="bahan_bakar" required>
                                             <option value="" selected disabled>Pilih Bahan Bakar Mobil</option>
-                                            <option value="Petrol/Gasoline/Bensin">Petrol/Gasoline/Bensin</option>
-                                            <option value="Diesel/Solar">Diesel/Solar</option>
+                                            <option value="0">Petrol/Gasoline/Bensin</option>
+                                            <option value="1">Diesel/Solar</option>
                                         </select>
                                     </div>
                                     <div class="col-md-12 mt-3">
@@ -369,10 +467,10 @@
                     <div class="col-md-12">
                         <div class="cont_call">
                             <h3> <strong class="multi color_chang"> Hubungi
-                                    Kami</strong><br>
-                                (+62) 82330478047<br>
-                                hayaautoexpress@gmail.com
-                            </h3>
+                                    Kami</strong></h3>
+                            <h4><a href="https://wa.me/+6282330478047">(+62)82330478047</a><br>
+                                <a href="mailto:hayaautoexpress@gmail.com">hayaautoexpress@gmail.com</a>
+                            </h4>
                         </div>
                         <div class="cont">
                             <h3> <strong class="multi"> Haya Auto Express</strong>
@@ -386,7 +484,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <p>(+62) 82330478047 hayaautoexpress@gmail.com</p>
+                            <p class="text-footer">Haya Auto Express</p>
                         </div>
                     </div>
                 </div>
@@ -407,151 +505,6 @@
     </script>
 </body>
 <script>
-//      document.getElementById('predictForm').onsubmit = async function(event) {
-//          event.preventDefault();
-//          const formData = new FormData(event.target);
-//          const params = new URLSearchParams(formData).toString();
-//          const response = await fetch(`http://localhost:5000/predicts?${params}`);
-//          const result = await response.json();
-//          var img = document.getElementById('plot');
-
-//          // Change the src attribute
-//          img.src = 'http://localhost:5000/gambar';
-//          var hasil = document.getElementById('hasil');
-
-//          // Change the src attribute
-//          hasil.textContent  = 'Hasil Prediksi: '+result['predict'];
-//          //document.getElementById('scatterPlot').src = result.plot_url;
-//      };
-
-//  function sendColab() {
-//  event.preventDefault();
-//  // Menghentikan perilaku default dari tombol submit
-
-//  Swal.fire({
-//      title: "Cari Sekarang",
-//      icon: "warning",
-//      showCancelButton: true,
-//      confirmButtonColor: "#3085d6",
-//      cancelButtonColor: "#d33",
-//      confirmButtonText: "Ya",
-//      cancelButtonText: "Tidak"
-//    }).then((result) => {
-//      if (result.isConfirmed) {
-
-//          // Ambil nilai dari form input
-//          const MasukanMerkMobil = document.getElementById('merk_mobil').value; // merk mobil
-//          const ModelNumeric =
-//              Model === 'BMX 3X13' ? 0 :
-//              Model === 'Daihatsu Ayla' ? 1 :
-//              Model === 'Daihatsu Ayla M' ? 2 :
-//              Model === 'Daihatsu Ayla R' ? 3 :
-//              Model === 'Daihatsu Ayla X' ? 4 :
-//              Model === 'Daihatsu Gran Max' ? 5 :
-//              Model === 'Daihatsu Grand Max Delvan' ? 6 :
-//              Model === 'Daihatsu Grand Max PS AC PU' ? 7 :
-//              Model === 'Daihatsu Sigra' ? 8 :
-//              Model === 'Daihatsu Sigra R' ? 9 :
-//              Model === 'Daihatsu Sigra R DLX' ? 10 :
-//              Model === 'Daihatsu Sigra M' ? 11 :
-//              Model === 'Daihatsu Terios TX ADVENTURE' ? 12 :
-//              Model === 'Daihatsu Xenia' ? 13 :
-//              Model === 'Daihatsu Xenia DLX VTTi' ? 14 :
-//              Model === 'Daihatsu Xenia R' ? 15 :
-//              Model === 'Daihatsu Xenia VVTI' ? 16 :
-//              Model === 'Daihatsu Xenia XI VVTI' ? 17 :
-//              Model === 'Datsun GO + PANCA A' ? 18 :
-//              Model === 'Honda Accord VTi' ? 19 :
-//              Model === 'Honda Brio' ? 20 :
-//              Model === 'Honda Brio E' ? 21 :
-//              Model === 'Honda Brio IVTEC E' ? 22 :
-//              Model === 'Honda Brio S' ? 23 :
-//              Model === 'Honda Brio Satya E' ? 24 :
-//              Model === 'Honda BRV E CVT CKD' ? 25 :
-//              Model === 'Honda civic type R' ? 26 :
-//              Model === 'Honda CR-V' ? 27 :
-//              Model === 'Honda CRV i-VTEC' ? 28 :
-//              Model === 'Honda CRV Turbo Prestige' ? 29 :
-//              Model === 'Honda Freed G83' ? 30 :
-//              Model === 'Honda HRV S' ? 31 :
-//              Model === 'Honda Jazz' ? 32 :
-//              Model === 'Honda Jazz GE8' ? 33 :
-//              Model === 'Honda Jazz RS' ? 34 :
-//              Model === 'Honda Mobilio E' ? 35 :
-//              Model === 'Isuzu Kijang Phanter' ? 36 :
-//              Model === 'Mitsubishi' ? 37 :
-//              Model === 'Mitsubishi Colt L 300' ? 38 :
-//              Model === 'Mitsubishi Colt T120 SS' ? 39 :
-//              Model === 'Mitsubishi L300' ? 40 :
-//              Model === 'Mitsubishi Mirage' ? 41 :
-//              Model === 'Mitsubishi Pajero Sport DAKAR HI POWER' ? 42 :
-//              Model === 'Mitsubishi Pajero Sport GLX' ? 43 :
-//              Model === 'Mitsubishi Strada TRITON DOUBLE CABIN EXCEED' ? 44 :
-//              Model === 'Mitsubishi T120SS 3-WAY WIDE DECK' ? 45 :
-//              Model === 'Mitsubishi T120SS T' ? 46 :
-//              Model === 'Nissan Grand Livina' ? 47 :
-//              Model === 'Nissan Grand Livina SV' ? 48 :
-//              Model === 'Nissan March' ? 49 :
-//              Model === 'Nissan Serena Comfort Touring' ? 50 :
-//              Model === 'Nissan X Trail' ? 51 :
-//              Model === 'Toyota Agya' ? 52 :
-//              Model === 'Toyota Agya G' ? 53 :
-//              Model === 'Toyota Avanza' ? 54 : 
-//              Model === 'Toyota Avanza E'? 55 :
-//              Model === 'Toyota Avanza G' ? 56 :
-//              Model === 'Toyota Avanza Veloz' ? 57 :
-//              Model === 'Toyota Calya' ? 58 :
-//              Model === 'Toyota Calya E' ? 59 :
-//              Model === 'Toyota Calya G' ? 60 :
-//              Model === 'Toyota Etios Valco' ? 61 :
-//              Model === 'Toyota Fortuner' ? 62 :
-//              Model === 'Toyota Fortuner G' ? 63 :
-//              Model === 'Toyota Fortuner VRZ TRD LUX' ? 64 :
-//              Model === 'Toyota Fortuner VRZ TRD LUX AT' ? 65 :
-//              Model === 'Toyota Hilux Single Cap' ? 66 :
-//              Model === 'Toyota Inova' ? 67 :
-//              Model === 'Toyota Innova G' ? 68 :
-//              Model === 'Toyota Innova V' ? 69 :
-//              Model === 'Toyota Kijang Innova' ? 70 :
-//              Model === 'Toyota Kijang Innova V' ? 71 :
-//              Model === 'Toyota Rush' ? 72 :
-//              Model === 'Toyota Sienta V' ? 73 :
-//              Model === 'Toyota Supra mk4' ? 74 : 
-//              Model === 'Toyota Vios' ? 75 :
-//              Model === 'Toyota Yaris E' ? 76 :
-//              Model === 'Toyota Yaris E FL' ? 77 :
-//              Model === 'Toyota Yaris G'  ? 78 :
-//              Model === 'Toyota Yaris J' ? 79 :
-//              Model === 'Toyota Yaris J MC' ? 80 :
-//              Model === 'Toyota Yaris S' ? 81 ;
-//              Model === 'Toyota Yaris S GR SPORT 7 AB' ? 82 :
-//              Model === 'Suzuki Carry Futura FD' ? 83 :
-//              Model === 'Suzuki Carry Futura' ? 84 :
-//              Model === 'Suzuki Carry Futura ST 150' ? 85 :
-//              Model === 'Suzuki Carry Mega' ? 86 :
-//              Model === 'Suzuki Carry STANDAR PU' ? 87 :
-//              Model === 'Suzuki Ertiga' ? 88 :   
-//              Model === 'Suzuki Ertiga DX' ? 89 :
-//              Model === 'Suzuki Ertiga GL' ? 90 :
-//              Model === 'Suzuki Ertiga GL DOUBLE'? 91 :
-//              Model === 'Suzuki Ertiga GL DOUBLE BLOWER' ? 92 :
-//              Model === 'Suzuki Mega Carry PU AC PS' ? 93 :
-//              ;
-
-//          const MasukanTransmisi = document.getElementById('transmisi').value; // Transmisi mobil
-//          const MasukanTransmisiNumeric =
-//             MasukanTransmisi === 'Manual' ? 0 :
-//             MasukanTransmisi === 'Automatic' ? 1 :
-//             MasukanTransmisi === 'Semi-Auto' ? 2 :
-//             ;
-
-//          const MasukanBahanBakar = document.getElementById('bahan_bakar').value; // Bahan Bakar mobil
-//          const MasukanBahanBakarNumeric =
-//             MasukanBahanBakar === 'Petrol/Gasoline/Bensin' ? 0 :
-//             MasukanBahanBakar === 'Diesel/Solar' ? 1 :
-//             ;
-
-
 function cariSekarang() {
     event.preventDefault();
     // Isi input dengan hasil pencarian
