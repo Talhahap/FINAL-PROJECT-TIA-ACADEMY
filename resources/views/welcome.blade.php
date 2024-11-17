@@ -9,6 +9,7 @@
     <!-- mobile metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- site metas -->
     <title>Haya Auto Express</title>
     <meta name="keywords" content="jual mobil, beli mobil, mobil bekas">
@@ -28,6 +29,8 @@
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
         media="screen">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -303,13 +306,20 @@
                                             placeholder="Masukan Ukuran Mesin Mobil">
                                     </div>
                                     <div class="col-sm-12">
-                                        <button class="find_btn" type="button" onclick="cariSekarang()">Cari
+                                        <button class="find_btn" type="button" onclick="cariSekarang(event)">Cari
                                             Sekarang</button>
                                     </div>
                                     <div class="col-md-12 mt-3" id="hasilContainer" style="display: none;">
-                                        <label for="hasil" class="form-label">Hasil Pencarian Harga Mobil Bekas
-                                        </label>
-                                        <input class="form-control" type="number" id="hasil" name="hasil" readonly>
+                                        <label for="hasil" class="form-label-hasil text-center">Hasil Pencarian
+                                        </label><br>
+                                        <p>Berdasarkan kriteria yang telah ditentukan, harga yang disarankan adalah
+                                            sejumlah :</p>
+                                        <input class="form-control" type="text" id="hasilHarga" name="hasilHarga"
+                                            required disabled>
+                                        <div class="col-sm-12">
+                                            <a href="javascript:void(0);" onclick="location.reload();"><button
+                                                    class="find_btn" type="button">Ok</button></a>
+                                        </div>
                                     </div>
                                 </div>
                             </form>
@@ -328,7 +338,7 @@
                 <div class="col-md-12">
                     <div class="titlepage">
                         <h2>Mengapa Memilih Kami</h2>
-                        <span>Berikut alasan mengapa Anda harus memilih Haya Auto Express
+                        <span>Berikut alasan mengapa Anda harus memilih <span class="branding">Haya Auto Express</span>
                             sebagai platform prediksi
                             harga mobil bekas Anda.</span>
                     </div>
@@ -483,7 +493,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <p class="text-footer">Haya Auto Express</p>
+                            <p class="text-footer">Copyright © 2024 | Developed with ♥ by Haya Auto Express</p>
                         </div>
                     </div>
                 </div>
@@ -492,6 +502,8 @@
     </footer>
     <!-- end footer -->
     <!-- Javascript files-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/popper.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
@@ -502,15 +514,92 @@
     <script src="{{ asset('js/custom.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js">
     </script>
+
 </body>
 <script>
+const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
+function formatRupiah(angka) {
+    return "Rp. " + angka.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
 function cariSekarang() {
     event.preventDefault();
-    // Isi input dengan hasil pencarian
-    //  document.getElementById("hasil").value = hargaMobilBekas;
 
-    // Tampilkan div hasilContainer
-    document.getElementById("hasilContainer").style.display = "block";
+    Swal.fire({
+        title: "Tunjukkan Hasil Analisa?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Ya",
+        cancelButtonText: "Tidak"
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Ambil nilai input dari form
+            const model = parseInt(document.getElementById('model').value);
+            const tahun = parseInt(document.getElementById('tahun').value);
+            const transmisi = parseInt(document.getElementById('transmisi').value);
+            const jarakTempuh = parseFloat(document.getElementById('jarak_tempuh').value);
+            const bahanBakar = parseInt(document.getElementById('bahan_bakar').value);
+            const pajak = parseFloat(document.getElementById('pajak').value);
+            const mpg = parseFloat(document.getElementById('mpg').value);
+            const ukuranMesin = parseFloat(document.getElementById('ukuran_mesin').value);
+
+            const data = {
+                'model': model,
+                'tahun': tahun,
+                'transmisi': transmisi,
+                'jarak_tempuh': jarakTempuh,
+                'bahan_bakar': bahanBakar,
+                'pajak': pajak,
+                'mpg': mpg,
+                'ukuran_mesin': ukuranMesin,
+            };
+
+            console.log("Data yang dikirim:", data);
+
+            // Kirim data ke API backend
+            fetch('/predict', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': csrfToken
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(response => response.json())
+                .then(responseData => {
+                    if (responseData.error) {
+                        Swal.fire("Error", responseData.error, "error");
+                    } else {
+                        console.log("Menampilkan hasil prediksi...");
+                        document.getElementById("hasilContainer").style.display = "block";
+
+                        const harga = responseData["Prediksi Harga"];
+                        console.log(harga);
+
+                        // Format harga menjadi Rupiah
+                        const hargaFormatted = formatRupiah(harga);
+
+                        const hasilInput = document.getElementById("hasilHarga");
+
+                        // Hapus atribut disabled sementara
+                        hasilInput.disabled = false;
+
+                        // Isi nilai yang sudah diformat ke input
+                        hasilInput.value = hargaFormatted;
+
+                        // Tambahkan atribut disabled kembali (opsional)
+                        hasilInput.disabled = true;
+                    }
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    Swal.fire("Error", "Terjadi kesalahan saat memproses permintaan.", "error");
+                });
+        }
+    });
 }
 </script>
 
