@@ -251,13 +251,14 @@
                                             <option value="98">Toyota Yaris J MC</option>
                                             <option value="99">Toyota Yaris S</option>
                                             <option value="100">Toyota Yaris S GR SPORT 7 AB</option>
-                                            <option value="lainnya">Lainnya</option>
+                                            <option value="101">Lainnya</option>
                                         </select>
                                         <div id="custom-input">
                                             <input class="form-control" min="1500" max="2099" id="custom_model"
                                                 name="custom_model" type="text"
                                                 placeholder="Masukan Mobil Merek Lainnya" style="display: none;">
                                         </div>
+
                                     </div>
                                     <div class="col-md-12 mt-3">
                                         <label for="transmisi" class="form-label">Tahun <label
@@ -535,11 +536,11 @@ function handleDropdownChange() {
     const customInput = document.getElementById('custom-input');
     const customTextField = document.getElementById('custom_model');
 
-    if (dropdown.value === "lainnya") {
-        customInput.style.display = "block";
+    if (dropdown.value === "101") {
+        customTextField.style.display = "block";
         customTextField.value = "";
     } else {
-        customInput.style.display = "none";
+        customTextField.style.display = "none";
     }
 }
 
@@ -557,27 +558,13 @@ function cariSekarang() {
     }).then((result) => {
         if (result.isConfirmed) {
             // Ambil nilai input dari form
-            // const model = parseInt(document.getElementById('model').value);
+            const model = parseInt(document.getElementById('model').value);
             // const modelValue =
             //     selectElement.value === 'lainnya' ?
             //     document.getElementById('modelText').value
             //     :
             //     parseInt(selectElement.value);
-            const dropdown = document.getElementById('brand');
-            const customTextField = document.getElementById('customBrand');
-            let valueToSend = "";
 
-
-            if (dropdown.value === "lainnya" && customTextField.value.trim() !== "") {
-                valueToSend = customTextField.value.trim();
-            } else {
-                valueToSend = dropdown.value;
-            }
-
-            if (!valueToSend) {
-                alert("Silakan pilih merek atau masukkan nama merek!");
-                return;
-            }
 
             const tahun = parseInt(document.getElementById('tahun').value);
             const transmisi = parseInt(document.getElementById('transmisi').value);
@@ -588,7 +575,7 @@ function cariSekarang() {
             const ukuranMesin = parseFloat(document.getElementById('ukuran_mesin').value);
 
             const data = {
-                'model': valueToSend,
+                'model': model,
                 'tahun': tahun,
                 'transmisi': transmisi,
                 'jarak_tempuh': jarakTempuh,
