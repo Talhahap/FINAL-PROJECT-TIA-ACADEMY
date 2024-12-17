@@ -147,7 +147,7 @@
                                     <div class="col-md-12 mt-3">
                                         <label for="model" class="form-label">Merk <label
                                                 class="text-red">*</label></label>
-                                        <select class="form-control" id="model" name="model" required>
+                                        <!-- <select class="form-control" id="model" name="model" required>
                                             <option value="" selected disabled>Pilih Merk Mobil</option>
                                             <option value="0">BMW 3X13</option>
                                             <option value="1">Daiatsu Sigra</option>
@@ -250,7 +250,9 @@
                                             <option value="98">Toyota Yaris J MC</option>
                                             <option value="99">Toyota Yaris S</option>
                                             <option value="100">Toyota Yaris S GR SPORT 7 AB</option>
-                                        </select>
+                                        </select> -->
+                                        <input class="form-control" min="1500" max="2099" id="model" name="model"
+                                            type="text" placeholder="Masukan Mobil">
                                     </div>
                                     <div class="col-md-12 mt-3">
                                         <label for="transmisi" class="form-label">Tahun <label
@@ -537,7 +539,7 @@ function cariSekarang() {
     }).then((result) => {
         if (result.isConfirmed) {
             // Ambil nilai input dari form
-            const model = parseInt(document.getElementById('model').value);
+            // const model = parseInt(document.getElementById('model').value);
             const tahun = parseInt(document.getElementById('tahun').value);
             const transmisi = parseInt(document.getElementById('transmisi').value);
             const jarakTempuh = parseFloat(document.getElementById('jarak_tempuh').value);
@@ -547,7 +549,7 @@ function cariSekarang() {
             const ukuranMesin = parseFloat(document.getElementById('ukuran_mesin').value);
 
             const data = {
-                'model': model,
+                'model': 1,
                 'tahun': tahun,
                 'transmisi': transmisi,
                 'jarak_tempuh': jarakTempuh,
