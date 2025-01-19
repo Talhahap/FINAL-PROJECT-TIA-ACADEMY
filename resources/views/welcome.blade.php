@@ -11,10 +11,10 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- site metas -->
-    <title>Haya Auto Express</title>
+    <title>Used Car Prediction</title>
     <meta name="keywords" content="jual mobil, beli mobil, mobil bekas">
-    <meta name="description" content="Haya Auto Express - Platform terbaik untuk jual beli mobil bekas di Indonesia">
-    <meta name="author" content="Haya Auto Express">
+    <meta name="description" content="Used Car Prediction - Platform terbaik untuk jual beli mobil bekas di Indonesia">
+    <meta name="author" content="Used Car Prediction">
     <!-- bootstrap css -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <!-- style css -->
@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
         media="screen">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -52,7 +53,7 @@
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
                         <div class="full">
                             <div class="center-desk">
-                                <p class="text-header">Haya Auto Express</p>
+                                <p class="text-header"><a href="{{''}}">Used Car Prediction</a></p>
                             </div>
                         </div>
                     </div>
@@ -77,12 +78,12 @@
     <section class="banner_main">
         <div class="container">
             <div class="row d_flex">
-                <div class="col-md-12">
+                <div class="col-md-6">
                     <div class="text-bg p-0">
-                        <h1 class="mb-1">Temukan Harga Mobil Bekas Terbaik</h1>
-                        <strong class="mb-3">Platform Prediksi Harga Mobil Terpercaya</strong>
+                        <h1><strong class="mb-3">Platform Prediksi Harga Mobil Terpercaya</strong></h1>
 
-                        <a href="#">Selengkapnya</a>
+                        <h2 class="header-text mb-2">Temukan Harga Mobil Bekas Terbaik</h2>
+                        <a href="#Prediksi"><button class="button-header">Klik untuk cari mobil</button></a>
                     </div>
                 </div>
             </div>
@@ -95,38 +96,71 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="titlepage">
-                        <h2>VARIETAS MOBIL</h2>
-                        <span>Kami memprediksi harga beragam mobil bekas sesuai dengan kebutuhan Anda.</span>
+                    <div class="titlepage mb-5">
+                        <h2 class="varietas-judul">VARIETAS MOBIL</h2>
+                        <!-- <span>Kami memprediksi harga beragam mobil bekas sesuai dengan kebutuhan Anda.</span> -->
                     </div>
                 </div>
             </div>
-            <div class="row">
+
+            <div class="row mb-5">
                 <div class="col-md-4 padding_leri">
                     <div class="car_box">
-                        <figure><img src="{{ asset('images/car_img1.png') }}" alt="#" /></figure>
-                        <h3>Hyundai</h3>
+                        <img src="/images/brand/bmw.png" class="img-brand">
                     </div>
                 </div>
                 <div class="col-md-4 padding_leri">
                     <div class="car_box">
-                        <figure><img src="{{ asset('images/car_img2.png') }}" alt="#" /></figure>
-                        <h3>Audi</h3>
+                        <img src="/images/brand/daihatsu.png" class="img-brand">
                     </div>
                 </div>
                 <div class="col-md-4 padding_leri">
                     <div class="car_box">
-                        <figure><img src="{{ asset('images/car_img3.png') }}" alt="#" /></figure>
-                        <h3>BMW X5</h3>
+                        <img src="/images/brand/datsun.png" class="img-brand">
                     </div>
                 </div>
             </div>
+            <div class="row mb-5">
+                <div class="col-md-4 padding_leri">
+                    <div class="car_box">
+                        <img src="/images/brand/honda.png" class="img-brand">
+                    </div>
+                </div>
+                <div class="col-md-4 padding_leri">
+                    <div class="car_box">
+                        <img src="/images/brand/isuzu.png" class="img-brand">
+                    </div>
+                </div>
+                <div class="col-md-4 padding_leri">
+                    <div class="car_box">
+                        <img src="/images/brand/mitsubishi.png" class="img-brand">
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-md-4 padding_leri">
+                    <div class="car_box">
+                        <img src="/images/brand/nissan.png" class="img-brand">
+                    </div>
+                </div>
+                <div class="col-md-4 padding_leri">
+                    <div class="car_box">
+                        <img src="/images/brand/suzuki.png" class="img-brand">
+                    </div>
+                </div>
+                <div class="col-md-4 padding_leri">
+                    <div class="car_box">
+                        <img src="/images/brand/toyota.png" class="img-brand">
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     <!-- end car -->
     <!-- bestCar -->
-    <div id="contact" class="bestCar">
-        <div class="container">
+    <div id="Prediksi" class="bestCar">
+        <div class="container" id="Prediksi">
             <div class="row">
                 <div class="col-md-12">
                 </div>
@@ -134,17 +168,19 @@
             <div class="row">
                 <div class="col-sm-6">
                     <h3 id="hasil" style="color:white"> </h3>
-                    <img id="plot" src="" width=100%>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-12">
                     <div class="row">
                         <div class="col-md-12 offset-md-12">
                             <form class="main_form" id="predictForm">
                                 <div class="titlepage">
                                     <h2>Temukan Harga Mobil Bekas Terbaik</h2>
+                                    <span>Kami memprediksi harga beragam mobil bekas sesuai dengan kebutuhan
+                                        Anda.</span>
+
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-12 mt-3">
+                                    <div class="col-md-6 mt-3">
                                         <label for="model" class="form-label">Merk <label
                                                 class="text-red">*</label></label>
                                         <select class="form-control" id="model" name="model"
@@ -256,17 +292,18 @@
                                         <div id="custom-input">
                                             <input class="form-control" min="1500" max="2099" id="custom_model"
                                                 name="custom_model" type="text"
-                                                placeholder="Masukan Mobil Merek Lainnya" style="display: none;">
+                                                placeholder="Masukan Mobil Merek Lainnya" style="display: none;"
+                                                required>
                                         </div>
 
                                     </div>
-                                    <div class="col-md-12 mt-3">
+                                    <div class="col-md-6 mt-3">
                                         <label for="transmisi" class="form-label">Tahun <label
                                                 class="text-red">*</label></label>
                                         <input class="form-control" min="1500" max="2099" id="tahun" name="tahun"
-                                            type="number" placeholder="Masukan Tahun Mobil">
+                                            type="number" placeholder="Masukan Tahun Mobil" required>
                                     </div>
-                                    <div class="col-md-12 mt-3">
+                                    <div class="col-md-6 mt-3">
                                         <label for="transmisi" class="form-label">Transmisi <label
                                                 class="text-red">*</label></label>
                                         <select class="form-control" id="transmisi" name="transmisi" required>
@@ -277,13 +314,13 @@
                                         </select>
 
                                     </div>
-                                    <div class="col-md-12 mt-3">
+                                    <div class="col-md-6 mt-3">
                                         <label for="jarak_tempuh" class="form-label">Jarak Tempuh <label
                                                 class="text-red">*</label></label>
                                         <input class="form-control" id="jarak_tempuh" name="jarak_tempuh" type="number"
-                                            placeholder="Masukan Jarak Tempuh Mobil">
+                                            placeholder="Masukan Jarak Tempuh Mobil" required>
                                     </div>
-                                    <div class="col-md-12 mt-3">
+                                    <div class="col-md-6 mt-3">
                                         <label for="bahan_bakar" class="form-label">Bahan Bakar <label
                                                 class="text-red">*</label>
                                         </label>
@@ -293,25 +330,25 @@
                                             <option value="1">Diesel/Solar</option>
                                         </select>
                                     </div>
-                                    <div class="col-md-12 mt-3">
+                                    <div class="col-md-6 mt-3">
                                         <label for="pajak" class="form-label">Pajak <label class="text-red">*</label>
                                         </label>
                                         <input class="form-control" id="pajak" name="pajak" type="number"
-                                            placeholder="Masukan Pajak Mobil">
+                                            placeholder="Masukan Pajak Mobil" required>
                                     </div>
-                                    <div class="col-md-12 mt-3">
+                                    <div class="col-md-6 mt-3">
                                         <label for="mpg" class="form-label">MPG (Mil Per Galon)<label
                                                 class="text-red">*</label>
                                         </label>
                                         <input class="form-control" id="mpg" name="mpg" type="number"
-                                            placeholder="Masukan MPG Mobil">
+                                            placeholder="Masukan MPG Mobil" required>
                                     </div>
-                                    <div class="col-md-12 mt-3">
+                                    <div class="col-md-6 mt-3">
                                         <label for="ukuran_mesin" class="form-label">Ukuran Mesin <label
                                                 class="text-red">*</label>
                                         </label>
                                         <input class="form-control" type="number" id="ukuran_mesin" name="ukuran_mesin"
-                                            placeholder="Masukan Ukuran Mesin Mobil">
+                                            placeholder="Masukan Ukuran Mesin Mobil" required>
                                     </div>
                                     <div class="col-sm-12">
                                         <button class="find_btn" type="button" onclick="cariSekarang(event)">Cari
@@ -345,35 +382,31 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <h2>Mengapa Memilih Kami</h2>
-                        <span>Berikut alasan mengapa Anda harus memilih <span class="branding">Haya Auto Express</span>
-                            sebagai platform prediksi
-                            harga mobil bekas Anda.</span>
+                        <h2>Mengapa Memilih Kami?</h2>
+                        <span>Berikut alasan mengapa Anda harus memilih <span class="branding">Used Car
+                                Prediction</span> sebagai platform prediksi harga mobil bekas Anda.</span><br>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 mt-4">
                     <div class="choose_box">
                         <span>01</span>
                         <p>Kami menyediakan berbagai jenis mobil bekas berkualitas dengan
-                            harga terjangkau dan proses
-                            yang mudah.</p>
+                            harga terjangkau dan proses yang mudah.</p>
                     </div>
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-12 mt-4">
                     <div class="choose_box">
                         <span>02</span>
-                        <p>Kami memiliki layanan pelanggan yang siap membantu Anda 24/7
-                            untuk memastikan pengalaman jual
+                        <p>Kami memiliki layanan pelanggan yang siap membantu Anda 24/7 untuk memastikan pengalaman jual
                             beli mobil Anda berjalan lancar.</p>
                     </div>
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-12 mt-4">
                     <div class="choose_box">
                         <span>03</span>
-                        <p>Kami menawarkan pilihan asuransi untuk memastikan Anda merasa
-                            aman dan terlindungi selama
+                        <p>Kami menawarkan pilihan asuransi untuk memastikan Anda merasa aman dan terlindungi selama
                             transaksi jual beli.</p>
                     </div>
                 </div>
@@ -385,9 +418,9 @@
     <div class="cutomer">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 mb-5">
                     <div class="titlepage">
-                        <h2>Apa Kata Pelanggan Kami</h2>
+                        <h2>Apa Kata Pelanggan Kami?</h2>
                     </div>
                 </div>
             </div>
@@ -409,13 +442,12 @@
                                         </div> -->
                                         <div class="our cross_layout">
                                             <div class="test_box">
-                                                <h4>Budi Santoso</h4>
+                                                <h4 class="cutomer-name">Budi Santoso</h4>
                                                 <span>Pembeli</span>
-                                                <p>Saya sangat puas dengan layanan Haya Auto
-                                                    Express. Proses beli sangat
+                                                <p>Saya sangat puas dengan layanan Used Car Prediction. Proses beli
+                                                    sangat
                                                     mudah dan mobil yang saya beli dalam
                                                     kondisi sangat baik.</p>
-                                                <i><img src="{{ asset('images/te1.png') }}" alt="#" /></i>
                                             </div>
                                         </div>
                                     </div>
@@ -429,13 +461,12 @@
                                         </div> -->
                                         <div class="our cross_layout">
                                             <div class="test_box">
-                                                <h4>Siti Aisyah</h4>
+                                                <h4 class="cutomer-name">Siti Aisyah</h4>
                                                 <span>Pembeli</span>
-                                                <p>Pengalaman beli mobil di Haya Auto
-                                                    Express sangat memuaskan. Layanan
+                                                <p>Pengalaman beli mobil di Used Car Prediction sangat memuaskan.
+                                                    Layanan
                                                     pelanggan sangat responsif dan membantu.
                                                 </p>
-                                                <i><img src="{{ asset('images/te1.png') }}" alt="#" /></i>
                                             </div>
                                         </div>
                                     </div>
@@ -449,13 +480,12 @@
                                         </div> -->
                                         <div class="our cross_layout">
                                             <div class="test_box">
-                                                <h4>Andi Wijaya</h4>
+                                                <h4 class="cutomer-name">Andi Wijaya</h4>
                                                 <span>Pembeli</span>
                                                 <p>Mobil yang disediakan sangat bervariasi
                                                     dan dalam kondisi baik. Saya
-                                                    pasti akan menggunakan Haya Auto Express
+                                                    pasti akan menggunakan Used Car Prediction
                                                     lagi di masa depan.</p>
-                                                <i><img src="{{ asset('images/te1.png') }}" alt="#" /></i>
                                             </div>
                                         </div>
                                     </div>
@@ -482,26 +512,34 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="cont_call">
-                            <h3> <strong class="multi color_chang"> Hubungi
-                                    Kami</strong></h3>
-                            <h4><a href="https://wa.me/+6282330478047">(+62)82330478047</a><br>
-                                <a href="mailto:hayaautoexpress@gmail.com">hayaautoexpress@gmail.com</a>
+                        <!-- Kontak Section -->
+                        <div class="cont_call" style="text-align: center; margin-bottom: 30px;">
+                            <div class="titlepage mt-5">
+                                <h2 style="color: #00113f;">Hubungi Kami</h2>
+                            </div>
+                            <h4>
+                                <a href="https://wa.me/+6281311851874"
+                                    style="text-decoration: none; color: #000; margin-right: 15px; font-size: 22px;">
+                                    <i class="fas fa-phone-alt"></i> (+62) 813-1185-1874
+                                </a><br>
+                                <a href="mailto:talhahalfian.p@gmail.com"
+                                    style="text-decoration: none; color: #000; font-size: 22px;">
+                                    <i class="fas fa-envelope"></i> talhahalfian.p@gmail.com
+                                </a>
                             </h4>
                         </div>
-                        <div class="cont">
-                            <h3> <strong class="multi"> Haya Auto Express</strong>
-                                Platform Prediksi Harga Mobil Bekas Terbaik 2024
-                            </h3>
-                        </div>
+
+
                     </div>
                 </div>
             </div>
+
+
             <div class="copyright">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <p class="text-footer">Copyright © 2024 | Developed with ♥ by Haya Auto Express</p>
+                            <p class="text-footer">Copyright © 2025 | Developed with ♥ by Used Car Prediction</p>
                         </div>
                     </div>
                 </div>
@@ -524,6 +562,20 @@
     </script>
 
 </body>
+<script>
+document.getElementById('scrollButton').addEventListener('click', function() {
+    const targetElement = document.getElementById('Prediksi');
+    const offsetTop = targetElement.offsetTop; // Posisi elemen dari atas halaman
+
+    // Scroll halaman ke posisi elemen
+    window.scrollTo({
+        top: offsetTop, // Posisi vertikal elemen
+        behavior: 'smooth' // Efek scroll halus
+    });
+});
+</script>
+
+
 <script>
 const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 

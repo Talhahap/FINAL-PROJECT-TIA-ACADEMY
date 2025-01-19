@@ -69,22 +69,64 @@ h6 {
 
 h1 {
     font-size: 24px;
-    font-family: "Righteous", cursive;
+    font-family: Georgia, serif;
 }
 
 h2 {
     font-size: 22px;
-    font-family: "Righteous", cursive;
+    font-family: Georgia, serif;
+}
+
+.header-text {
+    color: white !important;
+    font-weight: bold;
+}
+
+.button-header {
+    background-color: white;
+    border: 5px solid transparent;
+    border-radius: 10px;
+    color: #00113f;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: ease-in all 0.5s;
+}
+.button-header:hover {
+    background-color: #00113f;
+    border: 5px solid white;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    transition: ease-in all 0.5s;
+
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 
 h3 {
     font-size: 18px;
-    font-family: "Righteous", cursive;
+    font-family: Georgia, serif;
+}
+
+.varietas {
+    color: white !important;
+}
+.varietas-judul {
+    margin: 0 !important;
 }
 
 h4 {
     font-size: 16px;
-    font-family: "Righteous", cursive;
+    font-family: Georgia, serif;
 }
 
 h5 {
@@ -134,7 +176,7 @@ p {
 }
 
 a {
-    color: #222222;
+    color: #00113f;
     text-decoration: none;
     outline: none !important;
 }
@@ -317,6 +359,7 @@ button {
     padding: 20px 30px;
     position: fixed;
     z-index: 9999;
+    border-bottom: 1px solid #ddd;
 }
 
 .logo a {
@@ -327,10 +370,15 @@ button {
     line-height: 40px;
 }
 
+a:hover {
+    text-decoration: none !important;
+    color: #00113f !important;
+}
+
 /** banner section **/
 
 .banner_main {
-    background: url(../images/banner.jpg);
+    background: url(../images/header.jpg);
     background-repeat: no-repeat;
     min-height: 700px;
     display: flex;
@@ -354,21 +402,11 @@ button {
 }
 
 .text-bg strong {
-    font-family: "Righteous", cursive;
+    font-family: Georgia, serif;
     font-size: 40px;
     line-height: 50px;
     color: #fff;
     padding-bottom: 10px;
-    display: block;
-}
-
-.text-bg span {
-    font-family: "Righteous", cursive;
-    color: #f6d601;
-    font-size: 40px;
-    line-height: 50px;
-    font-weight: bold;
-    padding-bottom: 20px;
     display: block;
 }
 
@@ -379,34 +417,14 @@ button {
     padding-bottom: 60px;
 }
 
-.text-bg a {
-    font-family: "Righteous", cursive;
-    font-size: 17px;
-    background-color: #fff;
-    color: #000;
-    padding: 13px 0px;
-    width: 100%;
-    max-width: 190px;
-    text-align: center;
-    display: inline-block;
-    transition: ease-in all 0.5s;
-}
-
-.text-bg a:hover {
-    background-color: #f6d601;
-    color: #000;
-    transition: ease-in all 0.5s;
-    border-radius: 26px;
-}
-
 .titlepage {
     text-align: center;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
 }
 
 .titlepage h2 {
-    font-size: 45px;
-    color: #3e3e3e;
+    font-size: 22px;
+    color: black;
     line-height: 50px;
     font-weight: bold;
     padding: 0;
@@ -458,7 +476,7 @@ button {
 
 .car_box h3 {
     color: #0c0c0e;
-    background-color: #f6d601;
+    background-color: #00113f;
     font-size: 30px;
     line-height: 28px;
     height: 84px;
@@ -476,7 +494,7 @@ button {
 
 .bestCar {
     margin-top: 90px;
-    background: url(../images/bg.jpg);
+    background-color: #00113f;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     padding: 100px 0;
@@ -491,6 +509,7 @@ button {
 
 .main_form {
     padding: 50px 0px 50px 40px;
+    border-radius: 10px;
 }
 
 .bestCar .main_form .contactus {
@@ -506,11 +525,13 @@ button {
 }
 
 .bestCar .main_form .find_btn {
-    font-family: "Righteous", cursive;
-    font-size: 17px;
+    font-family: Georgia, serif;
+    font-size: 16px;
     transition: ease-in all 0.5s;
-    background-color: #000;
-    color: #fff;
+    background-color: #00113f;
+    color: white;
+    border: 5px solid #00113f;
+    border-radius: 10px;
     padding: 13px 0px;
     margin: 0 auto;
     max-width: 200px;
@@ -520,10 +541,11 @@ button {
 }
 
 .bestCar .main_form .find_btn:hover {
-    background-color: #f6d601;
+    background-color: white;
     transition: ease-in all 0.5s;
-    color: #000;
-    border-radius: 26px;
+    color: #00113f;
+    border: 5px solid #00113f;
+    border-radius: 16px;
 }
 
 #request *::placeholder {
@@ -602,25 +624,29 @@ button {
 }
 
 .choose .choose_box {
-    text-align: center;
+    display: flex; /* Mengaktifkan flexbox */
+    align-items: center; /* Mengatur elemen agar sejajar secara vertikal */
+    text-align: left; /* Mengatur teks agar rata kiri */
+    gap: 20px; /* Jarak antara nomor dan paragraf */
 }
 
 .choose .choose_box span {
-    color: #fff;
-    background-color: #23262d;
+    color: #00113f;
+    background-color: white;
     border-radius: 60px;
-    border: #f6d601 solid 5px;
+    border: #00113f solid 5px;
     padding: 20px 27px;
     display: inline-block;
     font-size: 20px;
-    margin-bottom: 20px;
+    font-weight: bold;
+    margin-bottom: 0px;
 }
 
 .choose .choose_box p {
     color: #23262d;
     font-size: 16px;
     line-height: 28px;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
 }
 
 /** end Choose  section **/
@@ -630,12 +656,17 @@ button {
 .cutomer {
     margin-top: 40px;
     padding-bottom: 120px;
-    background: #23262d;
+    background: #00113f;
     padding-top: 60px;
 }
 
 .cutomer .titlepage h2 {
     color: #fff;
+}
+.cutomer-name {
+    color: black;
+    font-weight: bold;
+    font-family: Georgia, serif;
 }
 
 .cutomer_Carousel .carousel-caption {
@@ -683,7 +714,7 @@ button {
 .cutomer_Carousel .test_box span {
     font-size: 17px;
     line-height: 28px;
-    color: #f6d601;
+    color: #00113f;
 }
 
 .cutomer_Carousel .test_box p {
@@ -701,7 +732,8 @@ button {
 .cutomer_Carousel .carousel-indicators li {
     width: 45px;
     height: 13px;
-    background: #f6d601;
+    background: #00113f;
+    border: 2px solid white;
     border-radius: 10px;
 }
 
@@ -719,7 +751,7 @@ button {
 /** footer **/
 
 .multi {
-    color: #f6d601;
+    color: #00113f;
     font-weight: bold;
     font-size: 40px;
 }
@@ -731,7 +763,7 @@ button {
 .footer {
     font-family: Poppins;
     background: #fff;
-    padding-top: 50px;
+    /* padding-top: 50px; */
     text-align: center;
 }
 
@@ -770,9 +802,9 @@ button {
 }
 
 .copyright {
-    margin-top: 43px;
-    padding: 20px 0px;
-    background-color: #23262d;
+    /* margin-top: 43px; */
+    padding: 15px 0px;
+    background-color: black;
 }
 
 .copyright p {
@@ -784,10 +816,6 @@ button {
 
 .copyright a {
     color: #fff;
-}
-
-.copyright a:hover {
-    color: #f6d601;
 }
 
 /** end footer **/
@@ -1001,11 +1029,13 @@ button {
 .form-label {
     margin-bottom: 0px !important;
     font-weight: bold !important;
+    color: black !important;
 }
 .form-label-hasil {
     margin-bottom: 0px !important;
     font-weight: bold !important;
     text-align: center !important;
+    color: black !important;
 }
 .text-red {
     color: red !important;
@@ -1013,15 +1043,15 @@ button {
 
 .text-header {
     font-weight: bold;
-    color: #f6d601;
+    color: #00113f;
     font-size: 1.5rem;
-    font-family: "Righteous", cursive;
+    font-family: Georgia, serif;
 }
 .text-footer {
-    font-weight: bold;
-    color: #f6d601 !important;
-    font-size: 0.5rem;
-    font-family: "Righteous", cursive;
+    /* font-weight: bold; */
+    color: white !important;
+    font-size: 12px !important;
+    font-family: Georgia, serif;
 }
 
 .scrollable-div {
@@ -1035,14 +1065,25 @@ button {
     box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan efek bayangan */
 }
 ::-webkit-scrollbar {
-    width: 1rem;
+    width: 0.75rem;
 }
 ::-webkit-scrollbar-thumb {
-    background: #f6d601;
+    background: #00113f;
     border-radius: 5px;
 }
 
 .branding {
-    color: #f6d601 !important;
+    color: #00113f !important;
     font-weight: bold;
+}
+
+.img-brand {
+    width: 200px;
+    height: 100%;
+}
+
+.form-control {
+    color: black !important;
+    border: 1px solid #00113f !important;
+    border-radius: 10px !important;
 }
